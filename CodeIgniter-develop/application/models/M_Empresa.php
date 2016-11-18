@@ -9,8 +9,15 @@ class M_Empresa extends CI_Model {
 	
 	public function registrarEmpresa($data) {
 		$data = array(
-			'imagen'			=> $data['imagen'],
-			
+			'EMP_IMAGEN'				=> $data['imagen'],
+			'EMP_NOMBRE'				=> $data['nombre_empresa'],
+			'EMP_PAIS'					=> $data['pais'],
+			'EMP_CIUDAD'				=> $data['ciudad'],
+			'EMP_EMAIL'					=> $data['email'],
+			'EMP_TIPO'					=> $data['tipo_usuario'],
+			'EMP_ANIO_FUNDACION'		=> $data['anio_fundacion'],
+			'EMP_DESCRIPCION'			=> $data['descripcion'],
+			''
 		);
 		
 		return false;
@@ -23,6 +30,10 @@ class M_Empresa extends CI_Model {
 			$resultado = true;
 		}
 		return $resultado;
+	}
+	
+	public function registrarSectorEmpresarial($data) {
+		
 	}
 }
 
